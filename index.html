@@ -8,21 +8,28 @@
 
 <style>
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+
+html{
+  scroll-behavior:smooth
+}
+
 body{
   margin:0;
   background:#f5f1e8;
   color:#17132b;
   font-family:"Malgun Gothic",sans-serif
 }
+
 img{
   display:block;
   max-width:100%
 }
+
 a{
   text-decoration:none;
   color:inherit
 }
+
 .wrap{
   width:min(1180px,90%);
   margin:auto
@@ -82,6 +89,7 @@ h1{
   max-width:570px
 }
 
+
 /* 메인 대표전화 영역 */
 .hero-contact{
   margin-top:38px;
@@ -121,6 +129,8 @@ h1{
   color:#ffffff8f;
 }
 
+
+/* 메인 인물사진 */
 .hero-photo{
   height:600px;
   display:flex;
@@ -146,6 +156,7 @@ h1{
   object-fit:contain;
   filter:drop-shadow(0 22px 24px #0008)
 }
+
 
 section{
   padding:100px 0
@@ -183,6 +194,7 @@ section{
   color:#5b5860
 }
 
+
 .services{
   background:#090042;
   color:#fff
@@ -219,11 +231,13 @@ section{
   color:#ffffffa5
 }
 
+
 .feature-grid>img{
   width:100%;
   height:420px;
   object-fit:cover
 }
+
 
 .gallery{
   background:#e9e2d4
@@ -244,6 +258,7 @@ section{
   padding:15px
 }
 
+
 .awards{
   background:#fff
 }
@@ -256,6 +271,7 @@ section{
   padding:12px
 }
 
+
 .location{
   background:#efe8da
 }
@@ -264,6 +280,7 @@ section{
   width:100%;
   box-shadow:0 12px 35px #0002
 }
+
 
 /* 지도 클릭 효과 */
 .map-link{
@@ -286,6 +303,7 @@ section{
   line-height:1.9
 }
 
+
 footer{
   background:#05002d;
   color:#ffffff9c;
@@ -293,11 +311,33 @@ footer{
   font-size:13px
 }
 
+
+/* =========================
+   모바일 전용
+   ========================= */
+
 @media(max-width:800px){
+
+  /* 모바일 가로 넘침 방지 */
+  html,
+  body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+  }
+
+  header,
+  section,
+  footer{
+    width:100%;
+    max-width:100%;
+  }
+
 
   .menu{
     display:none
   }
+
 
   .hero,
   .about-grid,
@@ -306,14 +346,17 @@ footer{
     grid-template-columns:1fr
   }
 
+
   .hero{
     padding-top:45px
   }
+
 
   .hero-contact{
     margin-top:30px;
     padding-top:20px;
   }
+
 
   .hero-contact-numbers{
     flex-direction:column;
@@ -323,40 +366,63 @@ footer{
     line-height:1.5;
   }
 
+
   .hero-contact-note{
     font-size:10px;
   }
+
 
   .hero-photo{
     height:430px
   }
 
+
+  /* 모바일에서 원형 배경이 화면 밖으로
+     튀어나가지 않도록 조정 */
+  .hero-photo:before{
+    width:90vw;
+    height:90vw;
+    max-width:360px;
+    max-height:360px;
+    left:50%;
+    transform:translateX(-50%);
+    bottom:35px;
+  }
+
+
   h1{
     font-size:52px
   }
 
+
   .cards{
     grid-template-columns:1fr 1fr
   }
+
 
   .gallery-grid,
   .award-grid{
     grid-template-columns:1fr
   }
 
+
   .gallery-grid img,
   .award-grid img{
     height:auto
   }
 
+
   section{
     padding:70px 0
   }
+
 }
 </style>
 </head>
 
+
 <body>
+
 
 <header>
 
@@ -374,6 +440,7 @@ footer{
     </div>
 
   </nav>
+
 
   <div class="hero wrap">
 
@@ -394,7 +461,9 @@ footer{
         함께 살펴드립니다.
       </p>
 
+
       <!-- 대표전화 -->
+
       <div class="hero-contact">
 
         <div class="hero-contact-title">
@@ -423,40 +492,58 @@ footer{
 
     </div>
 
+
     <div class="hero-photo">
-      <img src="assets/portrait.png"
-           alt="계령철학원 원장">
+
+      <img
+        src="assets/portrait.png"
+        alt="계령철학원 원장">
+
     </div>
 
   </div>
 
 </header>
 
+
+
 <section class="about" id="about">
 
   <div class="wrap about-grid">
 
-    <img class="about-photo"
-         src="assets/portrait_work.jpg"
-         alt="작업 모습">
+
+    <img
+      class="about-photo"
+      src="assets/portrait_work.jpg"
+      alt="작업 모습">
+
 
     <div>
 
-      <div class="eyebrow"
-           style="color:#8a7240">
+      <div
+        class="eyebrow"
+        style="color:#8a7240">
+
         GYERYEONG PHILOSOPHY
+
       </div>
 
+
       <h2 class="section-title">
+
         오랜 경험과 전통으로<br>
         삶의 길을 살핍니다.
+
       </h2>
 
+
       <p class="copy">
+
         계령철학원은 사주와 작명, 궁합, 운세를 비롯해
         중요한 날을 정하는 택일과 풍수 상담을 진행합니다.
         단순한 풀이보다 현재의 흐름을 이해하고
         앞으로의 선택에 도움이 되는 상담을 지향합니다.
+
       </p>
 
     </div>
@@ -464,6 +551,8 @@ footer{
   </div>
 
 </section>
+
+
 
 <section class="services" id="consult">
 
@@ -473,179 +562,285 @@ footer{
       CONSULTATION
     </div>
 
+
     <h2 class="section-title">
       상담 분야
     </h2>
 
+
     <div class="cards">
 
+
       <div class="card">
+
         <b>01</b>
-        <h3>사주 · 운세</h3>
-        <p>타고난 기운과 현재의 흐름을 살펴봅니다.</p>
+
+        <h3>
+          사주 · 운세
+        </h3>
+
+        <p>
+          타고난 기운과 현재의 흐름을 살펴봅니다.
+        </p>
+
       </div>
 
+
       <div class="card">
+
         <b>02</b>
-        <h3>작명</h3>
-        <p>뜻과 음양오행의 조화를 고려한 이름을 살핍니다.</p>
+
+        <h3>
+          작명
+        </h3>
+
+        <p>
+          뜻과 음양오행의 조화를 고려한 이름을 살핍니다.
+        </p>
+
       </div>
 
+
       <div class="card">
+
         <b>03</b>
-        <h3>궁합 · 택일</h3>
-        <p>인연의 조화와 중요한 시기의 길일을 상담합니다.</p>
+
+        <h3>
+          궁합 · 택일
+        </h3>
+
+        <p>
+          인연의 조화와 중요한 시기의 길일을 상담합니다.
+        </p>
+
       </div>
 
+
       <div class="card">
+
         <b>04</b>
-        <h3>풍수</h3>
-        <p>방향과 터의 흐름을 살피는 풍수 상담을 진행합니다.</p>
+
+        <h3>
+          풍수
+        </h3>
+
+        <p>
+          방향과 터의 흐름을 살피는 풍수 상담을 진행합니다.
+        </p>
+
       </div>
+
 
     </div>
 
   </div>
 
 </section>
+
+
 
 <section>
 
   <div class="wrap feature-grid">
 
+
     <div>
 
-      <div class="eyebrow"
-           style="color:#8a7240">
+      <div
+        class="eyebrow"
+        style="color:#8a7240">
+
         FORTUNE & FENG SHUI
+
       </div>
+
 
       <h2 class="section-title">
         전통 역학과 풍수
       </h2>
 
+
       <p class="copy">
+
         오랜 경험을 바탕으로 사주와 풍수의 흐름을 살펴
         중요한 선택의 방향을 상담합니다.
+
       </p>
 
     </div>
 
-    <img src="assets/fortune.png"
-         alt="풍수 이미지">
+
+    <img
+      src="assets/fortune.png"
+      alt="풍수 이미지">
+
 
   </div>
 
 </section>
+
+
 
 <section class="gallery" id="gallery">
 
   <div class="wrap">
 
-    <div class="eyebrow"
-         style="color:#8a7240">
+
+    <div
+      class="eyebrow"
+      style="color:#8a7240">
+
       ARTWORK
+
     </div>
+
 
     <h2 class="section-title">
       달마도
     </h2>
 
+
     <div class="gallery-grid">
 
-      <img src="assets/dalma1.jpg"
-           alt="달마도 작품 1">
 
-      <img src="assets/dalma2.jpg"
-           alt="달마도 작품 2">
+      <img
+        src="assets/dalma1.jpg"
+        alt="달마도 작품 1">
 
-      <img src="assets/dalma3.jpg"
-           alt="달마도 작품 3">
+
+      <img
+        src="assets/dalma2.jpg"
+        alt="달마도 작품 2">
+
+
+      <img
+        src="assets/dalma3.jpg"
+        alt="달마도 작품 3">
+
 
     </div>
 
   </div>
 
 </section>
+
+
 
 <section class="awards">
 
   <div class="wrap">
 
-    <div class="eyebrow"
-         style="color:#8a7240">
+
+    <div
+      class="eyebrow"
+      style="color:#8a7240">
+
       CERTIFICATES
+
     </div>
+
 
     <h2 class="section-title">
       상장 · 자격 자료
     </h2>
 
+
     <div class="award-grid">
 
-      <img src="assets/certificate1.jpg"
-           alt="상장 및 자격 자료 1">
 
-      <img src="assets/certificate2.jpg"
-           alt="상장 및 자격 자료 2">
+      <img
+        src="assets/certificate1.jpg"
+        alt="상장 및 자격 자료 1">
 
-      <img src="assets/certificate3.jpg"
-           alt="상장 및 자격 자료 3">
+
+      <img
+        src="assets/certificate2.jpg"
+        alt="상장 및 자격 자료 2">
+
+
+      <img
+        src="assets/certificate3.jpg"
+        alt="상장 및 자격 자료 3">
+
 
     </div>
 
   </div>
 
 </section>
+
+
 
 <section class="location" id="location">
 
   <div class="wrap location-grid">
 
+
     <div>
 
-      <div class="eyebrow"
-           style="color:#8a7240">
+      <div
+        class="eyebrow"
+        style="color:#8a7240">
+
         LOCATION
+
       </div>
 
+
       <h2>
+
         계령철학원<br>
         오시는 길
+
       </h2>
+
 
       <p>
         대구 달서구 죽전길 18
       </p>
 
+
       <p style="font-size:14px;color:#766f66;">
+
         지도를 클릭하면 네이버지도로 연결됩니다.
+
       </p>
 
     </div>
 
-    <a class="map-link"
-       href="https://naver.me/5XcyF1eq"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="네이버지도에서 계령역학철학원 위치 보기">
 
-      <img src="assets/map.png"
-           alt="계령역학철학원 위치 지도">
+    <a
+      class="map-link"
+      href="https://naver.me/5XcyF1eq"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="네이버지도에서 계령역학철학원 위치 보기">
+
+
+      <img
+        src="assets/map.png"
+        alt="계령역학철학원 위치 지도">
+
 
     </a>
+
 
   </div>
 
 </section>
 
+
+
 <footer>
 
   <div class="wrap">
+
     계령철학원 · 대구 달서구 죽전길 18
+
   </div>
 
 </footer>
+
 
 </body>
 </html>
