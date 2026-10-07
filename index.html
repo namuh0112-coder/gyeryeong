@@ -95,15 +95,25 @@ h1{
   margin-top:38px;
   padding-top:24px;
   border-top:1px solid #ffffff32;
-  max-width:500px;
+  max-width:560px;
+}
+
+.hero-contact-title{
+  font-size:20px;
+  line-height:1.4;
+  color:#d5c28a;
+  margin-bottom:10px;
+  font-weight:800;
 }
 
 .hero-contact-numbers{
   display:flex;
   align-items:center;
-  gap:22px;
-  font-size:26px;
+  gap:24px;
+  font-size:34px;
+  line-height:1.35;
   font-weight:800;
+  letter-spacing:-1px;
 }
 
 .hero-contact-numbers a{
@@ -116,9 +126,10 @@ h1{
 }
 
 .hero-contact-note{
-  margin-top:8px;
-  font-size:12px;
-  color:#ffffff8f;
+  margin-top:10px;
+  font-size:16px;
+  line-height:1.5;
+  color:#ffffffa8;
 }
 
 
@@ -180,16 +191,12 @@ section{
   box-shadow:0 20px 45px #0002
 }
 
+
+/* 일반 설명 문구 */
 .copy{
-  font-size:16px;
+  font-size:17px;
   line-height:2;
   color:#5b5860
-}
-
-
-/* 전통 역학과 풍수 설명 글자 크기 */
-.feature-grid .copy{
-  font-size:19px;
 }
 
 
@@ -214,22 +221,16 @@ section{
   border:0
 }
 
-
-/* 01 / 02 / 03 / 04 */
 .card b{
   font-size:14px;
   color:#d5c28a
 }
 
-
-/* 사주 · 운세 / 작명 / 궁합 · 택일 / 풍수 */
 .card h3{
   font-family:Batang,serif;
   font-size:30px
 }
 
-
-/* 상담 설명 문구 */
 .card p{
   font-size:17px;
   line-height:1.8;
@@ -306,16 +307,18 @@ section{
 
 /* 주소 */
 .location-address{
-  font-size:22px !important;
+  font-size:22px;
   line-height:1.9;
+  margin:0 0 8px;
 }
 
 
 /* 지도 안내 문구 */
 .location-note{
-  font-size:17px !important;
+  font-size:17px;
   line-height:1.9;
   color:#766f66;
+  margin:0;
 }
 
 
@@ -364,19 +367,26 @@ footer{
 
   .hero-contact{
     margin-top:30px;
-    padding-top:20px;
+    padding-top:22px;
+    max-width:100%;
+  }
+
+  .hero-contact-title{
+    font-size:18px;
+    margin-bottom:9px;
   }
 
   .hero-contact-numbers{
     flex-direction:column;
     align-items:flex-start;
     gap:2px;
-    font-size:23px;
-    line-height:1.5;
+    font-size:30px;
+    line-height:1.4;
   }
 
   .hero-contact-note{
-    font-size:11px;
+    margin-top:9px;
+    font-size:15px;
   }
 
   .hero-photo{
@@ -461,9 +471,13 @@ footer{
       </p>
 
 
-      <!-- 전화번호 -->
+      <!-- 대표전화 -->
 
       <div class="hero-contact">
+
+        <div class="hero-contact-title">
+          대표전화
+        </div>
 
         <div class="hero-contact-numbers">
 
@@ -559,7 +573,6 @@ footer{
 
     <div class="cards">
 
-
       <div class="card">
 
         <b>01</b>
@@ -619,7 +632,6 @@ footer{
 
       </div>
 
-
     </div>
 
   </div>
@@ -631,7 +643,6 @@ footer{
 <section>
 
   <div class="wrap feature-grid">
-
 
     <div>
 
@@ -747,7 +758,6 @@ footer{
 
   <div class="wrap location-grid">
 
-
     <div>
 
       <div
@@ -759,10 +769,8 @@ footer{
       </div>
 
       <h2>
-
         계령철학원<br>
         오시는 길
-
       </h2>
 
       <p class="location-address">
@@ -788,7 +796,6 @@ footer{
         alt="계령역학철학원 위치 지도">
 
     </a>
-
 
   </div>
 
