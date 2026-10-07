@@ -95,22 +95,14 @@ h1{
   margin-top:38px;
   padding-top:24px;
   border-top:1px solid #ffffff32;
-  max-width:470px;
-}
-
-.hero-contact-title{
-  font-size:13px;
-  letter-spacing:2px;
-  color:#d5c28a;
-  margin-bottom:7px;
-  font-weight:700;
+  max-width:500px;
 }
 
 .hero-contact-numbers{
   display:flex;
   align-items:center;
-  gap:18px;
-  font-size:22px;
+  gap:22px;
+  font-size:26px;
   font-weight:800;
 }
 
@@ -124,8 +116,8 @@ h1{
 }
 
 .hero-contact-note{
-  margin-top:6px;
-  font-size:11px;
+  margin-top:8px;
+  font-size:12px;
   color:#ffffff8f;
 }
 
@@ -195,6 +187,13 @@ section{
 }
 
 
+/* 전통 역학과 풍수 설명 글자 크기 */
+.feature-grid .copy{
+  font-size:19px;
+}
+
+
+/* 상담 분야 */
 .services{
   background:#090042;
   color:#fff
@@ -215,16 +214,22 @@ section{
   border:0
 }
 
+
+/* 01 / 02 / 03 / 04 */
 .card b{
   font-size:14px;
   color:#d5c28a
 }
 
+
+/* 사주 · 운세 / 작명 / 궁합 · 택일 / 풍수 */
 .card h3{
   font-family:Batang,serif;
   font-size:30px
 }
 
+
+/* 상담 설명 문구 */
 .card p{
   font-size:17px;
   line-height:1.8;
@@ -298,9 +303,19 @@ section{
   font-size:44px
 }
 
-.location p{
-  font-size:18px;
-  line-height:1.9
+
+/* 주소 */
+.location-address{
+  font-size:22px !important;
+  line-height:1.9;
+}
+
+
+/* 지도 안내 문구 */
+.location-note{
+  font-size:17px !important;
+  line-height:1.9;
+  color:#766f66;
 }
 
 
@@ -318,7 +333,6 @@ footer{
 
 @media(max-width:800px){
 
-  /* 모바일 가로 넘침 방지 */
   html,
   body{
     width:100%;
@@ -333,11 +347,9 @@ footer{
     max-width:100%;
   }
 
-
   .menu{
     display:none
   }
-
 
   .hero,
   .about-grid,
@@ -346,39 +358,31 @@ footer{
     grid-template-columns:1fr
   }
 
-
   .hero{
     padding-top:45px
   }
-
 
   .hero-contact{
     margin-top:30px;
     padding-top:20px;
   }
 
-
   .hero-contact-numbers{
     flex-direction:column;
     align-items:flex-start;
-    gap:1px;
-    font-size:19px;
+    gap:2px;
+    font-size:23px;
     line-height:1.5;
   }
 
-
   .hero-contact-note{
-    font-size:10px;
+    font-size:11px;
   }
-
 
   .hero-photo{
     height:430px
   }
 
-
-  /* 모바일에서 원형 배경이 화면 밖으로
-     튀어나가지 않도록 조정 */
   .hero-photo:before{
     width:90vw;
     height:90vw;
@@ -389,28 +393,23 @@ footer{
     bottom:35px;
   }
 
-
   h1{
     font-size:52px
   }
 
-
   .cards{
     grid-template-columns:1fr 1fr
   }
-
 
   .gallery-grid,
   .award-grid{
     grid-template-columns:1fr
   }
 
-
   .gallery-grid img,
   .award-grid img{
     height:auto
   }
-
 
   section{
     padding:70px 0
@@ -435,7 +434,7 @@ footer{
     <div class="menu">
       <a href="#about">소개</a>
       <a href="#consult">상담</a>
-      <a href="#gallery">작품</a>
+      <a href="#gallery">달마도</a>
       <a href="#location">오시는 길</a>
     </div>
 
@@ -462,13 +461,9 @@ footer{
       </p>
 
 
-      <!-- 대표전화 -->
+      <!-- 전화번호 -->
 
       <div class="hero-contact">
-
-        <div class="hero-contact-title">
-          대표전화
-        </div>
 
         <div class="hero-contact-numbers">
 
@@ -511,12 +506,10 @@ footer{
 
   <div class="wrap about-grid">
 
-
     <img
       class="about-photo"
       src="assets/portrait_work.jpg"
       alt="작업 모습">
-
 
     <div>
 
@@ -528,14 +521,12 @@ footer{
 
       </div>
 
-
       <h2 class="section-title">
 
         오랜 경험과 전통으로<br>
         삶의 길을 살핍니다.
 
       </h2>
-
 
       <p class="copy">
 
@@ -562,11 +553,9 @@ footer{
       CONSULTATION
     </div>
 
-
     <h2 class="section-title">
       상담 분야
     </h2>
-
 
     <div class="cards">
 
@@ -654,11 +643,9 @@ footer{
 
       </div>
 
-
       <h2 class="section-title">
         전통 역학과 풍수
       </h2>
-
 
       <p class="copy">
 
@@ -674,7 +661,6 @@ footer{
       src="assets/fortune.png"
       alt="풍수 이미지">
 
-
   </div>
 
 </section>
@@ -685,7 +671,6 @@ footer{
 
   <div class="wrap">
 
-
     <div
       class="eyebrow"
       style="color:#8a7240">
@@ -694,29 +679,23 @@ footer{
 
     </div>
 
-
     <h2 class="section-title">
-      달마도 작품
+      달마도
     </h2>
 
-
     <div class="gallery-grid">
-
 
       <img
         src="assets/dalma1.jpg"
         alt="달마도 작품 1">
 
-
       <img
         src="assets/dalma2.jpg"
         alt="달마도 작품 2">
 
-
       <img
         src="assets/dalma3.jpg"
         alt="달마도 작품 3">
-
 
     </div>
 
@@ -730,7 +709,6 @@ footer{
 
   <div class="wrap">
 
-
     <div
       class="eyebrow"
       style="color:#8a7240">
@@ -739,29 +717,23 @@ footer{
 
     </div>
 
-
     <h2 class="section-title">
       상장 · 자격 자료
     </h2>
 
-
     <div class="award-grid">
-
 
       <img
         src="assets/certificate1.jpg"
         alt="상장 및 자격 자료 1">
 
-
       <img
         src="assets/certificate2.jpg"
         alt="상장 및 자격 자료 2">
 
-
       <img
         src="assets/certificate3.jpg"
         alt="상장 및 자격 자료 3">
-
 
     </div>
 
@@ -786,7 +758,6 @@ footer{
 
       </div>
 
-
       <h2>
 
         계령철학원<br>
@@ -794,19 +765,12 @@ footer{
 
       </h2>
 
+      <p class="location-address">
+        대구 달서구 죽전길 18
+      </p>
 
-  <p class="location-address">
-  대구 달서구 죽전길 18
-  </p>
-      .location-address{
-  font-size:22px !important;
-}
-
-
-      <p style="font-size:16px;color:#766f66;">
-
+      <p class="location-note">
         지도를 클릭하면 네이버지도로 연결됩니다.
-
       </p>
 
     </div>
@@ -819,11 +783,9 @@ footer{
       rel="noopener noreferrer"
       aria-label="네이버지도에서 계령역학철학원 위치 보기">
 
-
       <img
         src="assets/map.png"
         alt="계령역학철학원 위치 지도">
-
 
     </a>
 
