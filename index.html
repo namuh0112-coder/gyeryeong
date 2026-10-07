@@ -35,6 +35,11 @@ a{
   margin:auto
 }
 
+
+/* =========================
+   메인
+   ========================= */
+
 header{
   background:#090042;
   color:#fff;
@@ -90,7 +95,8 @@ h1{
 }
 
 
-/* 메인 대표전화 영역 */
+/* 대표전화 */
+
 .hero-contact{
   margin-top:38px;
   padding-top:30px;
@@ -118,7 +124,6 @@ h1{
 
 .hero-contact-numbers a{
   color:#fff;
-  text-decoration:none;
 }
 
 .hero-contact-numbers a:hover{
@@ -134,6 +139,7 @@ h1{
 
 
 /* 메인 인물사진 */
+
 .hero-photo{
   height:600px;
   display:flex;
@@ -161,16 +167,41 @@ h1{
 }
 
 
+/* =========================
+   공통 섹션
+   ========================= */
+
 section{
   padding:100px 0
 }
 
+
+/* 큰 제목
+   상담 분야 / 전통 역학과 풍수
+   달마도 / 상장 · 자격 자료 등 */
+
 .section-title{
   font-family:Batang,serif;
-  font-size:45px;
+  font-size:48px;
+  line-height:1.25;
   letter-spacing:-3px;
   margin:10px 0 45px
 }
+
+
+/* 일반 본문 */
+
+.copy{
+  font-size:19px;
+  line-height:2;
+  color:#5b5860;
+  font-weight:400
+}
+
+
+/* =========================
+   소개
+   ========================= */
 
 .about{
   background:#fff
@@ -191,14 +222,11 @@ section{
   box-shadow:0 20px 45px #0002
 }
 
-.copy{
-  font-size:17px;
-  line-height:2;
-  color:#5b5860
-}
 
+/* =========================
+   상담 분야
+   ========================= */
 
-/* 상담 분야 */
 .services{
   background:#090042;
   color:#fff
@@ -211,7 +239,7 @@ section{
 }
 
 .card{
-  padding:35px 24px;
+  padding:38px 24px;
   border-right:1px solid #ffffff2c
 }
 
@@ -219,22 +247,38 @@ section{
   border:0
 }
 
+
+/* 01 / 02 / 03 / 04 */
+
 .card b{
-  font-size:17px;
+  font-size:16px;
   color:#d5c28a
 }
 
+
+/* 사주 · 운세 / 작명 등 */
+
 .card h3{
   font-family:Batang,serif;
-  font-size:30px
+  font-size:31px;
+  line-height:1.35;
+  margin-top:18px;
+  margin-bottom:17px
 }
+
+
+/* 상담 설명 */
 
 .card p{
-  font-size:17px;
-  line-height:1.8;
-  color:#ffffffa5
+  font-size:18px;
+  line-height:1.85;
+  color:#ffffffb3
 }
 
+
+/* =========================
+   전통 역학과 풍수
+   ========================= */
 
 .feature-grid>img{
   width:100%;
@@ -242,6 +286,10 @@ section{
   object-fit:cover
 }
 
+
+/* =========================
+   달마도
+   ========================= */
 
 .gallery{
   background:#e9e2d4
@@ -263,6 +311,10 @@ section{
 }
 
 
+/* =========================
+   상장 · 자격 자료
+   ========================= */
+
 .awards{
   background:#fff
 }
@@ -276,6 +328,10 @@ section{
 }
 
 
+/* =========================
+   오시는 길
+   ========================= */
+
 .location{
   background:#efe8da
 }
@@ -285,8 +341,6 @@ section{
   box-shadow:0 12px 35px #0002
 }
 
-
-/* 지도 클릭 효과 */
 .map-link{
   display:block;
   transition:transform .2s ease, opacity .2s ease;
@@ -297,28 +351,41 @@ section{
   opacity:.92;
 }
 
+
+/* 계령철학원 / 오시는 길 */
+
 .location h2{
   font-family:Batang,serif;
-  font-size:44px
+  font-size:48px;
+  line-height:1.3;
+  letter-spacing:-3px;
+  margin:10px 0 30px
 }
 
 
 /* 주소 */
+
 .location-address{
-  font-size:22px;
-  line-height:1.9;
+  font-size:23px;
+  line-height:1.8;
   margin:0 0 8px;
+  font-weight:500;
 }
 
 
-/* 지도 안내 문구 */
+/* 지도 안내 */
+
 .location-note{
-  font-size:17px;
-  line-height:1.9;
+  font-size:18px;
+  line-height:1.8;
   color:#766f66;
   margin:0;
 }
 
+
+/* =========================
+   하단
+   ========================= */
 
 footer{
   background:#05002d;
@@ -363,6 +430,9 @@ footer{
     padding-top:45px
   }
 
+
+  /* 전화 */
+
   .hero-contact{
     margin-top:30px;
     padding-top:22px;
@@ -387,6 +457,13 @@ footer{
     font-size:15px;
   }
 
+
+  /* 메인 */
+
+  h1{
+    font-size:52px
+  }
+
   .hero-photo{
     height:430px
   }
@@ -401,13 +478,64 @@ footer{
     bottom:35px;
   }
 
-  h1{
-    font-size:52px
+
+  /* 섹션 제목 */
+
+  .section-title{
+    font-size:39px;
+    line-height:1.3;
+    margin-bottom:35px
   }
+
+
+  /* 일반 설명 */
+
+  .copy{
+    font-size:18px;
+    line-height:1.9
+  }
+
+
+  /* 상담 */
 
   .cards{
     grid-template-columns:1fr 1fr
   }
+
+  .card{
+    padding:30px 18px
+  }
+
+  .card b{
+    font-size:15px
+  }
+
+  .card h3{
+    font-size:27px;
+    margin-top:14px;
+    margin-bottom:14px
+  }
+
+  .card p{
+    font-size:17px;
+    line-height:1.8
+  }
+
+
+  /* 위치 */
+
+  .location h2{
+    font-size:39px
+  }
+
+  .location-address{
+    font-size:21px
+  }
+
+  .location-note{
+    font-size:17px
+  }
+
 
   .gallery-grid,
   .award-grid{
@@ -469,7 +597,6 @@ footer{
       </p>
 
 
-      <!-- 대표전화 -->
       <div class="hero-contact">
 
         <div class="hero-contact-title">
@@ -527,26 +654,19 @@ footer{
       <div
         class="eyebrow"
         style="color:#8a7240">
-
         GYERYEONG PHILOSOPHY
-
       </div>
 
       <h2 class="section-title">
-
         오랜 경험과 전통으로<br>
         삶의 길을 살핍니다.
-
       </h2>
 
-      <p class="copy"
-         style="font-size:20px !important; line-height:2;">
-
+      <p class="copy">
         계령철학원은 사주와 작명, 궁합, 운세를 비롯해
         중요한 날을 정하는 택일과 풍수 상담을 진행합니다.
         단순한 풀이보다 현재의 흐름을 이해하고
         앞으로의 선택에 도움이 되는 상담을 지향합니다.
-
       </p>
 
     </div>
@@ -647,21 +767,16 @@ footer{
       <div
         class="eyebrow"
         style="color:#8a7240">
-
         FORTUNE & FENG SHUI
-
       </div>
 
       <h2 class="section-title">
         전통 역학과 풍수
       </h2>
 
-      <p class="copy"
-         style="font-size:20px !important; line-height:2;">
-
+      <p class="copy">
         오랜 경험을 바탕으로 사주와 풍수의 흐름을 살펴
         중요한 선택의 방향을 상담합니다.
-
       </p>
 
     </div>
@@ -684,9 +799,7 @@ footer{
     <div
       class="eyebrow"
       style="color:#8a7240">
-
       ARTWORK
-
     </div>
 
     <h2 class="section-title">
@@ -722,9 +835,7 @@ footer{
     <div
       class="eyebrow"
       style="color:#8a7240">
-
       CERTIFICATES
-
     </div>
 
     <h2 class="section-title">
@@ -762,9 +873,7 @@ footer{
       <div
         class="eyebrow"
         style="color:#8a7240">
-
         LOCATION
-
       </div>
 
       <h2>
@@ -805,9 +914,7 @@ footer{
 <footer>
 
   <div class="wrap">
-
     계령철학원 · 대구 달서구 죽전길 18
-
   </div>
 
 </footer>
