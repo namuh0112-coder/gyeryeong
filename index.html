@@ -335,7 +335,57 @@ section{
   height:430px;
   object-fit:contain;
   background:#fff;
-  padding:15px
+  padding:15px;
+  cursor:pointer;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+.gallery-grid img:hover{
+  transform:scale(1.015);
+  opacity:.92;
+}
+
+
+/* 달마도 확대 팝업 */
+
+.lightbox{
+  display:none;
+  position:fixed;
+  z-index:9999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,.88);
+  align-items:center;
+  justify-content:center;
+  padding:40px;
+}
+
+.lightbox.active{
+  display:flex;
+}
+
+.lightbox img{
+  max-width:90vw;
+  max-height:88vh;
+  object-fit:contain;
+  box-shadow:0 15px 50px #000;
+}
+
+.lightbox-close{
+  position:absolute;
+  top:20px;
+  right:30px;
+  color:#fff;
+  font-size:42px;
+  line-height:1;
+  cursor:pointer;
+  user-select:none;
+}
+
+.lightbox-close:hover{
+  opacity:.7;
 }
 
 
@@ -881,29 +931,35 @@ footer{
 
     <div class="gallery-grid">
 
-      <img
-        src="assets/dalma1.jpg"
-        alt="달마도 작품 1">
+<img
+  src="assets/dalma1.jpg"
+  alt="달마도 작품 1"
+  onclick="openLightbox(this)">
 
-      <img
-        src="assets/dalma2.jpg"
-        alt="달마도 작품 2">
+<img
+  src="assets/dalma2.jpg"
+  alt="달마도 작품 2"
+  onclick="openLightbox(this)">
 
-      <img
-        src="assets/dalma3.jpg"
-        alt="달마도 작품 3">
+<img
+  src="assets/dalma3.jpg"
+  alt="달마도 작품 3"
+  onclick="openLightbox(this)">
 
-      <img
-        src="assets/dalma4.jpg"
-        alt="달마도 작품 4">
+<img
+  src="assets/dalma4.jpg"
+  alt="달마도 작품 4"
+  onclick="openLightbox(this)">
 
-      <img
-        src="assets/dalma5.jpg"
-        alt="달마도 작품 5">
+<img
+  src="assets/dalma5.jpg"
+  alt="달마도 작품 5"
+  onclick="openLightbox(this)">
 
-      <img
-        src="assets/dalma6.jpg"
-        alt="달마도 작품 6">
+<img
+  src="assets/dalma6.jpg"
+  alt="달마도 작품 6"
+  onclick="openLightbox(this)">
 
     </div>
 
@@ -1013,6 +1069,56 @@ footer{
 
 </footer>
 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
 
+  <div class="lightbox-close" onclick="closeLightbox()">
+    &times;
+  </div>
+
+  <img
+    id="lightbox-image"
+    src=""
+    alt=""
+    onclick="event.stopPropagation()">
+
+</div>
+
+
+<script>
+
+function openLightbox(image){
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImage = document.getElementById("lightbox-image");
+
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
+
+  lightbox.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+
+function closeLightbox(){
+
+  const lightbox = document.getElementById("lightbox");
+
+  lightbox.classList.remove("active");
+
+  document.body.style.overflow = "";
+}
+
+
+document.addEventListener("keydown", function(event){
+
+  if(event.key === "Escape"){
+    closeLightbox();
+  }
+
+});
+
+</script>
+  
 </body>
 </html>
