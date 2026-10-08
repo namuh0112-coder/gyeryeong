@@ -165,6 +165,19 @@ h1{
   object-fit:contain;
   filter:drop-shadow(0 22px 24px #0008)
 }
+  .hero-photo-note{
+  position:absolute;
+  top:28px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90%;
+  text-align:center;
+  font-size:18px;
+  line-height:1.7;
+  font-weight:500;
+  color:#ffffffc7;
+  z-index:2;
+}
 
 
 /* =========================
@@ -477,7 +490,11 @@ footer{
     transform:translateX(-50%);
     bottom:35px;
   }
-
+ .hero-photo-note{
+    top:10px;
+    font-size:16px;
+    line-height:1.6;
+  }
 
   /* 섹션 제목 */
 
@@ -628,9 +645,16 @@ footer{
 
     <div class="hero-photo">
 
-      <img
-        src="assets/portrait.png"
-        alt="계령철학원 원장">
+  <div class="hero-photo-note">
+    생년월일과 태어난 시를 미리 알아두시면<br>
+    빠른 상담에 도움이 됩니다.
+  </div>
+
+  <img
+    src="assets/portrait.png"
+    alt="계령철학원 원장">
+
+</div>
 
     </div>
 
@@ -663,10 +687,13 @@ footer{
       </h2>
 
       <p class="copy">
-        계령철학원은 사주와 작명, 궁합, 운세를 비롯해
-        중요한 날을 정하는 택일과 풍수 상담을 진행합니다.
-        단순한 풀이보다 현재의 흐름을 이해하고
-        앞으로의 선택에 도움이 되는 상담을 지향합니다.
+        원장 계령(桂令) 선생은 어릴제 선비에
+        고장 안동 예안에서 태어나 도산유림에서
+        한학을 익히며 역리변화의 오묘함에 심취하여
+        주역, 적천수, 궁통보감, 사주첩경, 매화역수,
+        기문둔갑, 풍수음, 자평진전 육임등
+        해박한 지식을 심산대찰에서 수행정진하여
+        오행 역리 술법에 통달하신 분입니다.
       </p>
 
     </div>
@@ -775,8 +802,10 @@ footer{
       </h2>
 
       <p class="copy">
-        오랜 경험을 바탕으로 사주와 풍수의 흐름을 살펴
-        중요한 선택의 방향을 상담합니다.
+        계령 선생은 당신에 과거, 현재, 미래사를
+        예리한 통찰력으로 운명의 길흉화복을 분석,
+        예지하여 고달픈 삶을 행복한 삶으로 개운하여
+        살아갈 수 있도록 인생상담을 해드리고 있습니다.
       </p>
 
     </div>
