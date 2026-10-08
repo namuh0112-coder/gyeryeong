@@ -402,7 +402,14 @@ section{
   height:330px;
   object-fit:contain;
   background:#f3f0e9;
-  padding:12px
+  padding:12px;
+  cursor:pointer;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+.award-grid img:hover{
+  transform:scale(1.015);
+  opacity:.92;
 }
 
 
@@ -985,17 +992,20 @@ footer{
 
     <div class="award-grid">
 
-      <img
-        src="assets/certificate1.jpg"
-        alt="상장 및 자격 자료 1">
+<img
+  src="assets/certificate1.jpg"
+  alt="상장 및 자격 자료 1"
+  onclick="openLightbox(this)">
 
-      <img
-        src="assets/certificate2.jpg"
-        alt="상장 및 자격 자료 2">
+<img
+  src="assets/certificate2.jpg"
+  alt="상장 및 자격 자료 2"
+  onclick="openLightbox(this)">
 
-      <img
-        src="assets/certificate3.jpg"
-        alt="상장 및 자격 자료 3">
+<img
+  src="assets/certificate3.jpg"
+  alt="상장 및 자격 자료 3"
+  onclick="openLightbox(this)">
 
     </div>
 
