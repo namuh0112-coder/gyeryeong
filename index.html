@@ -340,7 +340,14 @@ section{
   cursor:pointer;
   transition:transform .2s ease, opacity .2s ease;
 }
-
+.gallery-grid img,
+.award-grid img,
+.lightbox img{
+  -webkit-user-select:none;
+  user-select:none;
+  -webkit-user-drag:none;
+  -webkit-touch-callout:none;
+}
 .gallery-grid img:hover{
   transform:scale(1.015);
   opacity:.92;
@@ -1128,7 +1135,20 @@ document.addEventListener("keydown", function(event){
   }
 
 });
+document.querySelectorAll(
+  ".gallery-grid img, .award-grid img, .lightbox img"
+).forEach(function(img){
 
+  img.addEventListener("contextmenu", function(event){
+    event.preventDefault();
+  });
+
+  img.addEventListener("dragstart", function(event){
+    event.preventDefault();
+  });
+
+});
+  
 </script>
   
 </body>
