@@ -450,15 +450,10 @@ section{
 
 .map-image{
   width:100%;
-  cursor:pointer;
+  cursor:default;
   border-radius:10px;
   box-shadow:0 12px 35px #0002;
   transition:transform .2s ease, opacity .2s ease;
-}
-
-.map-image:hover{
-  transform:translateY(-3px);
-  opacity:.95;
 }
 
 .map-buttons{
@@ -1100,8 +1095,7 @@ footer{
   <img
     class="map-image"
     src="assets/map.png"
-    alt="계령철학원 위치 지도"
-    onclick="openLightbox(this)">
+    alt="계령철학원 위치 지도">
 
   <div class="map-buttons">
 
