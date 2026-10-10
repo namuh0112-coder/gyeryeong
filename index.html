@@ -121,11 +121,26 @@ h1{
 }
 
 .hero-contact-title{
+  display:flex;
+  align-items:center;
+  gap:12px;
   font-size:20px;
   line-height:1.4;
   color:#d5c28a;
   margin-bottom:10px;
   font-weight:800;
+}
+
+.quick-consult{
+  display:inline-block;
+  padding:5px 11px;
+  border-radius:20px;
+  background:#ffd86b;
+  color:#090042;
+  font-size:15px;
+  line-height:1.2;
+  font-weight:900;
+  letter-spacing:-0.5px;
 }
 
 .hero-contact-numbers{
@@ -725,9 +740,10 @@ footer{
 
       <div class="hero-contact">
 
-        <div class="hero-contact-title">
-          대표전화
-        </div>
+<div class="hero-contact-title">
+  <span>대표전화</span>
+  <span class="quick-consult">빠른상담</span>
+</div>
 
         <div class="hero-contact-numbers">
 
