@@ -444,19 +444,47 @@ section{
   background:#efe8da
 }
 
-.location img{
+.map-box{
   width:100%;
-  box-shadow:0 12px 35px #0002
 }
 
-.map-link{
-  display:block;
+.map-image{
+  width:100%;
+  cursor:pointer;
+  border-radius:10px;
+  box-shadow:0 12px 35px #0002;
   transition:transform .2s ease, opacity .2s ease;
 }
 
-.map-link:hover{
+.map-image:hover{
   transform:translateY(-3px);
-  opacity:.92;
+  opacity:.95;
+}
+
+.map-buttons{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:14px;
+}
+
+.map-button{
+  display:block;
+  padding:16px 10px;
+  text-align:center;
+  font-size:16px;
+  font-weight:800;
+  border-radius:8px;
+}
+
+.naver-map-button{
+  background:#03c75a;
+  color:#fff;
+}
+
+.kakao-map-button{
+  background:#fee500;
+  color:#191919;
 }
 
 
@@ -1070,18 +1098,35 @@ footer{
     </div>
 
 
+<div class="map-box">
+
+  <img
+    class="map-image"
+    src="assets/map.png"
+    alt="계령철학원 위치 지도"
+    onclick="openLightbox(this)">
+
+  <div class="map-buttons">
+
     <a
-      class="map-link"
+      class="map-button naver-map-button"
       href="https://naver.me/5XcyF1eq"
       target="_blank"
-      rel="noopener noreferrer"
-      aria-label="네이버지도에서 계령역학철학원 위치 보기">
-
-      <img
-        src="assets/map.png"
-        alt="계령역학철학원 위치 지도">
-
+      rel="noopener noreferrer">
+      네이버 지도로 보기
     </a>
+
+    <a
+      class="map-button kakao-map-button"
+      href="https://map.kakao.com/?q=대구%20달서구%20죽전길%2018"
+      target="_blank"
+      rel="noopener noreferrer">
+      카카오 지도로 보기
+    </a>
+
+  </div>
+
+</div>
 
   </div>
 
